@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:log4jdbc:mysql://localhost:3306/hibernate</property>
+        <property name="connection.driver_class">net.sf.log4jdbc.DriverSpy</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">DRFT97ijh</property>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="dialect">org.hibernate.dialect.MySQL57Dialect</property>
+        <property name="current_session_context_class">thread</property>
+
+        <mapping class="ru.smith.entity.User"/>
+        <mapping class="ru.smith.entity.Role"/>
+        <mapping class="ru.smith.entity.Order"/>
+        <mapping class="ru.smith.entity.Product"/>
+        <mapping class="ru.smith.entity.ProductCategory"/>
+    </session-factory>
+</hibernate-configuration>
